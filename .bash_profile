@@ -4,16 +4,13 @@ export PATH="$HOME/bin:$PATH";
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{path,exports,aliases,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 #Add RVM
 export PATH="$PATH:$HOME/.rvm/bin";
-
-# Add Postgress
-export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH";
 
 #######################################
 
@@ -35,9 +32,6 @@ export PATH=/opt/csshX-0.74:$PATH
 # Put parallel stuff in the path
 export PATH=/opt/pssh-1.4.3:$PATH
 
-# Starting and Stopping Postgres
-alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # add Java 1.7 to path
 export JAVA_HOME=/Library/java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home
