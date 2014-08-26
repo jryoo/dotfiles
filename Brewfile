@@ -33,6 +33,7 @@ install homebrew/php/php55 --with-gmp
 # Install other useful binaries
 install ack
 install git
+install hub
 install imagemagick --with-webp
 install node
 install p7zip
