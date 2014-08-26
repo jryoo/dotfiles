@@ -34,6 +34,7 @@ install homebrew/php/php55 --with-gmp
 install ack
 install git
 install hub
+install heroku-toolbelt
 install imagemagick --with-webp
 install node
 install p7zip
