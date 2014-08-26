@@ -41,5 +41,8 @@ install p7zip
 install pigz
 install rhino
 
+# Install Cask
+install caskroom/cask/brew-cask
+
 # Remove outdated versions from the cellar
 cleanup
