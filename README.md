@@ -10,3 +10,4 @@ git clone https://github.com/jryoo/dotfiles.git && cd dotfiles && source bootstr
 ## Credits
 
 * [Mathiasbynens](https://github.com/mathiasbynens/dotfiles/blob/master/README.md) from whom I based most of my dotfiles from
+* [holman](https://github.com/holman/dotfiles) from whom I based some of my scripts
