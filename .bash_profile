@@ -60,8 +60,8 @@ eval "$(hub alias -s)"
 # export PATH=/opt/pssh-1.4.3:$PATH
 
 
-# add Java 1.7 to path
-export JAVA_HOME=/Library/java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home
+# add Java 1.8 to path
+export JAVA_HOME=/Library/java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home
 
 # add Kafka to path
 # export KAFKA_HOME=/opt/kafka_2.9.2-0.8.1
