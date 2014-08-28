@@ -1,0 +1,19 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"GitGutter",
+		"Jade",
+		"LiveReload",
+		"Markdown Preview",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"Theme - Flatland",
+		"Theme - Spacefunk",
+		"Theme - Spacegray",
+		"Vagrant"
+	]
+}

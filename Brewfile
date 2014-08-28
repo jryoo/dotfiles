@@ -20,6 +20,10 @@ install gnu-sed --default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 install bash
 install bash-completion
+# Install grc
+install grc
+# Install spark
+install spark
 
 # Install wget with IRI support
 install wget --enable-iri
@@ -28,7 +32,7 @@ install wget --enable-iri
 install vim --override-system-vi
 install homebrew/dupes/grep
 install homebrew/dupes/screen
-install homebrew/php/php55 --with-gmp
+# install homebrew/php/php55 --with-gmp
 
 # Install other useful binaries
 install ack

@@ -18,3 +18,6 @@ cask install alfred 2> /dev/null
 cask install divvy 2> /dev/null
 cask install istat-menus 2> /dev/null
 cask install cakebrew 2> /dev/null
+cask install spotify 2> /dev/null
+cask install xquartz 2> /dev/null
+cask install fantastical 2> /dev/null

@@ -30,15 +30,17 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     defaults write "${domain}" dontAutoLoad -array \
-        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
-        #"/System/Library/CoreServices/Menu Extras/Volume.menu" \
-        #"/System/Library/CoreServices/Menu Extras/User.menu"
+        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+        "/System/Library/CoreServices/Menu Extras/User.menu" \
+        "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+        "/System/Library/CoreServices/Menu Extras/Battery.menu"
+        #"/System/Library/CoreServices/Menu Extras/Volume.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
     # "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu"
+    #"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
@@ -293,7 +295,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 # Show item info to the right of the icons on the desktop
-/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
 # Enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
@@ -356,6 +358,10 @@ defaults write com.apple.dock mineffect -string "scale"
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
+# Enable magnification
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock largesize -int 55.53009
+
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
@@ -387,7 +393,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Remove the animation when hiding/showing the Dock
 #defaults write com.apple.dock autohide-time-modifier -float 0
@@ -668,9 +674,6 @@ defaults write com.mizage.direct.Divvy StartAtlogin -bool true
 
 # Start iStat Menus at login
 defaults write com.bjango.istatmenus StartAtlogin -bool true
-
-#
-defaults write com.bjango.istatmenus CPUDisplayMode -string 100,0 
 
 ###############################################################################
 # SizeUp.app                                                                  #
