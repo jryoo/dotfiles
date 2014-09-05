@@ -21,3 +21,5 @@ cask install cakebrew 2> /dev/null
 cask install spotify 2> /dev/null
 cask install xquartz 2> /dev/null
 cask install fantastical 2> /dev/null
+cask install imagealpha 2> /dev/null
+cask install imageoptim 2> /dev/null
