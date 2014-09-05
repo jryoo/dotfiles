@@ -573,6 +573,9 @@ open "${HOME}/preferences/iterm/Solarized Dark.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Install iTerm 2 preferences
+cp -r ~/preferences/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist 2> /dev/null
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
@@ -690,8 +693,8 @@ defaults write com.bjango.istatmenus StartAtlogin -bool true
 ###############################################################################
 
 # Install Sublime Text settings
-cp -r preferences/sublime/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
-cp -r preferences/sublime/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+cp -r ~/preferences/sublime/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+cp -r ~/preferences/sublime/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Package\ Control.sublime-settings 2> /dev/null
 
 ###############################################################################
 # Transmission.app                                                            #
