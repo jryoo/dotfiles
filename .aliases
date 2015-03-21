@@ -12,4 +12,4 @@ alias -- -="cd -"
 alias slime='open -a "Sublime Text"'
 
 # Using idea to open intellij
-alias idea='open -a "IntelliJ IDEA 13"'
+alias idea='open -a "IntelliJ IDEA 14"'
